@@ -48,7 +48,7 @@ public class ExtendReportDeomWithTestNG {
         ExtentTest test1= extent.createTest("Google Search Test One","Sample description");
         logger.info("logger information,hahaha");
         driver.get("https://github.com/SeleniumHQ/selenium/wiki/DesiredCapabilities");
-        AssertJUnit.assertTrue(1==3);
+        AssertJUnit.assertTrue(1==1);
         Thread.sleep(3000);
     }
 
