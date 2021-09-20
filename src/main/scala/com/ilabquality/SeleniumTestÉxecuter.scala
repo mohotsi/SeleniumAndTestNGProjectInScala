@@ -1,6 +1,6 @@
 package com.ilabquality
 
-import Config.property
+import com.ilabquality.Config.property
 import io.github.bonigarcia.wdm.WebDriverManager
 import org.apache.commons.io.FileUtils
 import org.openqa.selenium.OutputType
@@ -10,7 +10,7 @@ import org.openqa.selenium.firefox.{FirefoxDriver, FirefoxOptions}
 import org.openqa.selenium.ie.{InternetExplorerDriver, InternetExplorerOptions}
 import org.openqa.selenium.opera.{OperaDriver, OperaOptions}
 import org.openqa.selenium.remote.{DesiredCapabilities, RemoteWebDriver}
-import org.testng.annotations.AfterSuite
+import org.testng.annotations.AfterTest
 
 import java.io.File
 import java.text.SimpleDateFormat
@@ -30,8 +30,8 @@ class SeleniumTestÉxecuter {
 
 
 
-  @AfterSuite
-  def  endReport():Unit={
+  @AfterTest
+  def  endTest():Unit={
 
   }
   def getScreenShot(name:String): String ={

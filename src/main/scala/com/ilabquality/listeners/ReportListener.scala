@@ -14,7 +14,7 @@ class ReportListener extends IReporter {
 
     suites.forEach { suite =>
       val suiteResults = suite.getResults
-      val extent: ExtentReports = new ExtentReports(System.getProperty("user.dir") + s"/test-output/${suite.getName.replace(" ", "_")}Report.html", true)
+      val extent: ExtentReports = new ExtentReports(System.getProperty("user.dir") + s"/target/test-output/${suite.getName.replace(" ", "_")}Report.html", true)
       extent.addSystemInfo("url", property.getProperty("url"))
       extent.addSystemInfo("browser", property.getProperty("browser"))
       extent.addSystemInfo("suite", suite.getName)
