@@ -7,9 +7,7 @@ import scala.util.Random
 
 case class JobPage(applicantName: String =Random.alphanumeric.take(20).mkString,
                    email:String=Random.alphanumeric.take(10).mkString+"@ilabquality.com",
-                   cellNumber: String =  List(0+Random.nextInt(999999999).toString).map(number=>
-                   number.take(3)+" "+number.drop(3).take(3)+" "+number.drop(6)
-                   ).mkString,
+                   cellNumber: String = ("0"+Random.nextInt(999999999).toString).replaceAll("(\\d{3})(\\d{3})(\\d{4})","""$1 $2 $3"""),
                    message:String=Random.alphanumeric.take(80).mkString,
                    updloadUrl:String=System.getProperty("user.dir")+"/src/main/resources/files/Automation_Assessment.pdf")(implicit driver:RemoteWebDriver) {
 
